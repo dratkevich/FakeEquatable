@@ -13,3 +13,13 @@ extension FakeEquatable {
         return lhs.fakeValue == rhs.fakeValue
     }
 }
+
+struct FakeEquatableWrapper<T> {
+    let element: T
+    
+    init(_ element: T) {
+        self.element = element
+    }
+}
+
+extension FakeEquatableWrapper: FakeEquatable {}

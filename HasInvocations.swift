@@ -16,14 +16,11 @@ extension HasInvocations {
                 line: line)
             return
         }
-        for (index, invocation) in invocations.enumerated() {
-            XCTAssertEqual(self.invocations[index], invocation,
+        
+        for (first, second) in zip(self.invocations, invocations) {
+            XCTAssertEqual(first, second,
                            file: file,
                            line: line)
         }
-    }
-    
-    mutating func clearInvocations() {
-        invocations = []
     }
 }
