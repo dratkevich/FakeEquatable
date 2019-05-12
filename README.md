@@ -6,11 +6,11 @@ Just add both [FakeEquatable.swift](FakeEquatable.swift) and  [HasInvocations.sw
 
 ## Use cases 
 * [Mock and verify](#mock-and-verify)
-* [Assert equal for non equatable value types (**CAUTION:  not for use with reference types (classes)**)](equitability)
+* [Assert equal for non equatable value types](equitability) (**CAUTION:  not for use with reference types (classes)**)
 
 ## Examples
 ### Mock and verify
-Let's say one needs to mock a verify something similar to
+Let's say one needs to mock and verify something similar to
 
 ```swift
 struct Thing {
@@ -59,7 +59,7 @@ final class Service {
 
 ```
 In order to do so 
-1. Create a mock class that corresponds to `SomeOutput` and `HasInvocations` like this:
+1. Create a mock class that corresponds to `SomeOutput` and `HasInvocations`:
 
 ```swift
 final class MockSomeOutput: SomeOutput, HasInvocations {
