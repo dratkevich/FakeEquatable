@@ -6,7 +6,7 @@ Just add both [FakeEquatable.swift](FakeEquatable.swift) and  [HasInvocations.sw
 
 ## Use cases 
 * [Mock and verify](#mock-and-verify)
-* [Assert equal for non equatable value types](equitability) (**CAUTION:  not for use with reference types (classes)**)
+* [Assert equal for non equatable value types](#equitability) (**CAUTION:  not for use with reference types (classes)**)
 
 ## Examples
 ### Mock and verify
@@ -164,7 +164,7 @@ func testIsEqual() {
 ```
 
 ### Tips and tricks
-To react on invocation changes one can do something like this inside mock:
+To react on invocation changes one can do something like this inside a mock:
 ```swift
 var invocations: [Invocation] = [] {
     didSet {
@@ -174,7 +174,7 @@ var invocations: [Invocation] = [] {
 var invocationsDidChange: ((MockClass) -> Void)?
 ```
 
-and add callback inside unit test:
+and use a callback in unit tests:
 ```swift
 output.invocationsDidChange = {
     //
